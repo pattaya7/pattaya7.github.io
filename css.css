@@ -40,6 +40,15 @@ body {
 	overflow: hidden;
 }
 
+.youtube_box{
+	z-index: 99;
+	position: absolute;
+	top: 0;
+	right: 1em;
+	display: block;
+	border: 2px solid #505000;
+}
+
 audio{
 	width: 4em;
 	height: 0.8em;
