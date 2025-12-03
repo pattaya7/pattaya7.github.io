@@ -48,7 +48,7 @@ audio{
 	left: 2em;
 	display: block;
 	width: 90%;
-	height: 98%;
+	height: 95%;
 	background: #303030;
 	border-radius: 1em;
 	border: 1px solid #444444;
@@ -154,4 +154,5 @@ audio{
 
 .item:target .smenu {
     max-height: 13em;
+
 }
