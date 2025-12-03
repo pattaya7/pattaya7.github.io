@@ -11,7 +11,7 @@ body {
     background: radial-gradient(circle, rgba(55, 41, 16, 1) 0%, rgba(0, 0, 0, 1) 100%);
     width: 100vw;
     height: 100vh;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .body_left {
@@ -127,8 +127,8 @@ audio{
 .smenu a {
     color: #C28C2E;
     display: block;
-    padding: 16px 26px;
-    font-size: 1.8em;
+    padding: 10px 20px;
+    font-size: 1.2em;
     margin: 4px 0;
     position: relative;
 }
@@ -154,8 +154,5 @@ audio{
 }*/
 
 .item:target .smenu {
-    max-height: 13em;
-
+    max-height: 40em;
 }
-
-
