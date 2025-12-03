@@ -30,6 +30,7 @@ body {
 	height: 100%;
 	width: 80%;
 	background: #232332;
+	overflow: hidden;
 }
 
 audio{
