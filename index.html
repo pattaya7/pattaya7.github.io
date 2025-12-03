@@ -24,28 +24,28 @@
     <div class="body_left">
         <div class="menu">
             <li class="item" id="profile">
-                <a href="#profile" class="btn"><i class="fas fa-star" aria-hidden="true"></i> Plamy</a>
+                <a href="#profile" class="btn"><i class="fas fa-star" aria-hidden="true"></i> Palmy</a>
                 <div class="smenu">
-                    <a id="button1">อยากร้องดังดัง</a>
-                    <a id="button1">ซ่อนกลิ่น</a>
+                    <a id="plamy_button1">อยากร้องดังดัง</a>
+                    <a id="plamy_button2">ซ่อนกลิ่น</a>
                 </div>
             </li>
             <li class="item" id="message">
                 <a href="#message" class="btn"> <i class="fas fa-star" aria-hidden="true"></i> Texi</a>
                 <div class="smenu">
-                    <a id="button1">คิดถึงฉันไหมเวลาที่เธอ</a>
-                    <a id="button1">เธอรักฉันไหม</a>
-                    <a id="button1">อรวรรณ</a>
+                    <a id="texi_button1">คิดถึงฉันไหมเวลาที่เธอ</a>
+                    <a id="texi_button2">เธอรักฉันไหม</a>
+                    <a id="texi_button3">อรวรรณ</a>
                 </div>
             </li>
             <li class="item" id="Settings">
                 <a href="#Settings" class="btn"><i class="fas fa-star" aria-hidden="true"></i> Sek Loso</a>
                 <div class="smenu">
-                    <a id="button1">ฉันไม่สำออย</a>
-                    <a id="button1">เท่อย่างไทย</a>
-                    <a id="button1">คุณรู้ไหมครับ</a>
-                    <a id="button1">ฝนตกที่หน้าต่าง</a>
-                    <a id="button1">แม้ว่า</a>
+                    <a id="loso_button1">ฉันไม่สำออย</a>
+                    <a id="loso_button2">เท่อย่างไทย</a>
+                    <a id="loso_button3">คุณรู้ไหมครับ</a>
+                    <a id="loso_button4">ฝนตกที่หน้าต่าง</a>
+                    <a id="loso_button5">แม้ว่า</a>
                 </div>
             </li>
         </div>
@@ -58,9 +58,12 @@
 
     <script type="text/javascript">
         $(document).ready(function(){   
-            $('#right_box').load('./lyric_page1.html');
-            $('#button1').click(function(){              
-                $('#right_box').load('lyric_page1.html');
+            $('#right_box').load('./palmy_lyric_page1.html');
+            $('#plamy_button1').click(function(){              
+                $('#right_box').load('palmy_lyric_page1.html');
+            });
+            $('#texi_button1').click(function(){              
+                $('#right_box').load('texi_lyric_page1.html');
             });
         });
     </script>
