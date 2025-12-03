@@ -7,11 +7,21 @@
 }
 
 body {
-    background: rgb(55, 41, 16);
-    background: radial-gradient(circle, rgba(55, 41, 16, 1) 0%, rgba(0, 0, 0, 1) 100%);
+	background: #232332;
     /*width: 100vw;
     height: 100vh;*/
 	overflow-x: hidden;
+}
+
+.out_box{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 90%;
+	border: 2px solid #aa0;
+    overflow: hidden;	
 }
 
 .body_left {
@@ -20,7 +30,6 @@ body {
 	left: 0;
 	height: 100%;
 	width: 20%;
-	background: #010000;
 }
 
 .body_right {
@@ -29,7 +38,6 @@ body {
 	right: 0;
 	height: 100%;
 	width: 80%;
-	background: #232332;
 	overflow: hidden;
 }
 
