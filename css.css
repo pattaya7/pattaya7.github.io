@@ -48,7 +48,7 @@ audio{
 	left: 2em;
 	display: block;
 	width: 90%;
-	height: 95%;
+	height: 90%;
 	background: #303030;
 	border-radius: 1em;
 	border: 1px solid #444444;
@@ -156,3 +156,4 @@ audio{
     max-height: 13em;
 
 }
+
