@@ -31,6 +31,18 @@ body {
 	background: #232332;
 }
 
+audio{
+	width: 4em;
+	height: 0.8em;
+	padding-left: 1em;
+}
+
+.audio{
+	width: 2em;
+	height: 0.5em;
+	padding-left: 0.5em;
+}
+
 .lyric_box{
 	margin: 1em auto; 
 	left: 2em;
