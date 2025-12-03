@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Thai Songs and Lyrics</title>
+	
+	<link rel="stylesheet" type="text/css" href="css.css">
+    <!--font-awsome icons-->
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+
+<body>
+    <div class="body_left">
+        <div class="menu">
+            <li class="item" id="profile">
+                <a href="#profile" class="btn"><i class="far fa-user" aria-hidden="true"></i> Plamy</a>
+                <div class="smenu">
+                    <a id="button1">อยากร้องดังดัง</a>
+                    <a href="">ซ่อนกลิ่น</a>
+                </div>
+            </li>
+            <li class="item" id="message">
+                <a href="#message" class="btn"> <i class="far fa-envelope" aria-hidden="true"></i> Texi</a>
+                <div class="smenu">
+                    <a href="">new</a>
+                    <a href="">sent</a>
+                    <a href="">spam</a>
+                </div>
+            </li>
+            <li class="item" id="Settings">
+                <a href="#Settings" class="btn"><i class="fas fa-cog" aria-hidden="true"></i> Sek Loso</a>
+                <div class="smenu">
+                    <a href="">Password</a>
+                    <a href="">Language</a>
+                </div>
+            </li>
+        </div>
+    </div>
+	<div class="body_right">
+		<div class="lyric_box" id="right_box">
+		</div>
+	<div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){   
+            $('#right_box').load('./lyric_page1.html');
+            $('#button1').click(function(){              
+                $('#right_box').load('lyric_page1.html');
+            });
+        });
+    </script>
+</body>
+</html>
