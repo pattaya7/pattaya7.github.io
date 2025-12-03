@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Thai Songs and Lyrics</title>
+    <script>
+        function delay (URL) {
+            setTimeout( function() { window.location = URL }, 3000 );
+        }
+    </script>
 <body>
-<audio id="person1" src="./palmy_audio/palmy1_title.m4a"></audio>
+<audio id="palmy1_title" src="./palmy_audio/palmy1_title.m4a"></audio>
 
 <h1>อยากร้องดังดัง<a href="javascript:delay('index.html')" onclick="document.getElementById('palmy1_title').play()">▶</a></h1>
 <div class="lyric_1" id="lyric_page">
@@ -110,3 +115,4 @@
 <body>
 
 </html>
+
