@@ -24,6 +24,20 @@ body {
 	border-bottom: 1px solid #222200;
 }
 
+.top_nav_btn{
+	display: block;
+	position: relative;
+	width: 10em;
+	height: 2.6em;
+	margin-left: 1em;
+	margin-top: 0.2em;
+	background: #888870;
+	border: 1px solid #999980;
+	text-align: center;
+	color: #aaaa99;
+	font-size: 1.5em;
+}
+
 .out_box{
 	display: block;
 	position: absolute;
