@@ -13,6 +13,16 @@ body {
 	overflow-x: hidden;
 }
 
+.top_nav {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2em;
+	background: #121200;
+}
+
 .out_box{
 	display: block;
 	position: absolute;
