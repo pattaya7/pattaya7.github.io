@@ -19,8 +19,9 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 2em;
+	height: 3em;
 	background: #121200;
+	border-bottom: 1px solid #222200;
 }
 
 .out_box{
