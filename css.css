@@ -26,15 +26,14 @@ body {
 
 .top_nav_btn{
 	display: block;
-	position: relative;
-	width: 5em;
-	height: 2.6em;
+	float: left;
+	padding: 1em;
 	margin-left: 0.2em;
 	margin-top: 0.2em;
 	background: #D6D620;
 	border: 1px solid #a6a620;
 	text-align: center;
-	color: #121200;
+	color: #000000;
 	font-size: 1.5em;
 	border-radius: 0.5em 0.5em 0 0;
 }
