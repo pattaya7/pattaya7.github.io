@@ -27,15 +27,16 @@ body {
 .top_nav_btn{
 	display: block;
 	position: relative;
-	width: 10em;
+	width: 5em;
 	height: 2.6em;
 	margin-left: 1em;
 	margin-top: 0.2em;
-	background: #888870;
-	border: 1px solid #999980;
+	background: #D6D620;
+	border: 1px solid #a6a620;
 	text-align: center;
-	color: #aaaa99;
+	color: #121200;
 	font-size: 1.5em;
+	border-radius: 0.5em 0.5em 0 0;
 }
 
 .out_box{
