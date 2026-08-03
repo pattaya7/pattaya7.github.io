@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Thai Songs and Lyrics</title>
+	
+	<link rel="stylesheet" type="text/css" href="css.css">
+    <!--font-awsome icons-->
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+<body>
+<div class="top_nav">
+	<div class="top_nav_btn" id="ths">THS</div>
+	<div class="top_nav_btn" id="eea">EEA</div>
+</div>
+<div class="out_box" id="bg_contents">
+</div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){   
+            $('#ths').click(function(){              
+                window.location.href = './index.html';
+            });
+            $('#bg_contents').css('background-image', 'url(".eea/images/bg_1_01.gif")');
+            $('#bg_contents').click(function(){              
+                $('#bg_contents').css('background-image', 'url(".eea/images/bg_1_01.gif")');
+            });
+        });
+    </script>
+</body>
+</html>
