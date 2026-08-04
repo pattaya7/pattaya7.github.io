@@ -57,7 +57,7 @@ body {
 	height: 90%;
 	background-image: url(eea/images/bg_1_01.gif);
 	background-position: center center;
-    background-size: 100%;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     overflow: hidden;	
 }
