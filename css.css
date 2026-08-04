@@ -51,7 +51,7 @@ body {
 .out_box_eea{
 	display: block;
 	position: absolute;
-	top: 3em;
+	top: 5em;
 	left: 0;
 	width: 100%;
 	height: 90%;
@@ -63,7 +63,13 @@ body {
 }
 
 .eea_top{
-	display: block; width: 100%; height: 2em; background: #FF6347;
+	position: absolute; 
+	top: 3em;
+	left: 0;
+	display: block; 
+	width: 100%; 
+	height: 2em; 
+	background: #FF6347;
 }
 
 .body_left {
