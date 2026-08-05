@@ -30,10 +30,10 @@ body {
 	padding: 0.15em 1em;
 	margin-left: 0.2em;
 	margin-top: 0.2em;
-	background: #D6D620;
-	border: 1px solid #a6a620;
+	background: #00000;
+	border: 1px solid #333333;
 	text-align: center;
-	color: #FF6347;
+	color: #FFFFFF;
 	font-size: 1.5em;
 	border-radius: 0.5em 0.5em 0 0;
 }
