@@ -211,7 +211,7 @@ audio{
 	background-position: center center;
     background-size: auto 100%;
     background-repeat: no-repeat;
-    overflow: hidden;
+    overflow-y: auto;
 	text-align: center;
 }
 
