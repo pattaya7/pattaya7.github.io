@@ -247,7 +247,7 @@ audio{
 	border-radius: 0.2em; 
 	text-align: left; 
 	color: #e0ffff;
-	font-size:1.1em;
+	font-size:1.5em;
 }
 
 .st{
@@ -259,4 +259,5 @@ audio{
 	text-align: left; 
 	color: #334455; 
 	border-bottom: 1px dashed;
+	font-size: 1.3em;
 }
