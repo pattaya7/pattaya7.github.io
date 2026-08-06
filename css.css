@@ -203,10 +203,11 @@ audio{
 .out_box_eea{
 	display: block;
 	position: absolute;
-	top: 5em;
+	top: 3em;
 	left: 0;
 	width: 100%;
 	height: 90%;
+	border-top: 2px solid #d2aC4E;
 	background-image: url(eea/images/bg_1_01.gif);
 	background-position: center center;
     background-size: auto 100%;
@@ -263,7 +264,7 @@ audio{
 
 .eea_modal_box{
 	z-index: 99;
-	display: block;
+	display: none;
 	position: absolute;
 	margin: 0;
 	width: 100%;
@@ -282,14 +283,21 @@ audio{
 	border: 0.2em solid #444444;
 }
 
-.modal_btn{
-	display: table;
+.eea_modal_nav{
+	display: block; 
 	position: relative;
-	padding: 1em;
 	margin: 0 auto;
-	top: 1em;
+	margin-top: 1em; 
+	text-align: center;
+}
+
+.modal_btn{
+	float: left;
+	display: block; 
+	border-radius: 0.25em;
+	padding: 1em;
+	margin: 1em; 
 	background: #C28C2E;
 	border: 1px solid #d28d2E;
-	border-radius: 0.5em;
 	font-weight: bold;
 }
