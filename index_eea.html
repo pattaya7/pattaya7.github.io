@@ -26,7 +26,9 @@
 </div>
 <div class="eea_modal_box" id="eea_modal_box">
 	<div class="eea_modal" id="eaa_madal">
+		<div class="eea_moal_close" id="eea_moal_close">X</div>
 		<div class="eea_modal_nav" id="eea_modal_nav"></div>
+		<div class="eea_mbg" id="eea_mbg"></div>
 	</div>
 </div>
 <div class="out_box_eea" id="bg_contents">
@@ -34,7 +36,7 @@
 		<ul>
 			<li>
 				<a class="st_title">SECTION 1: STARTING THE DAY</a>
-				<a class="st" id="st_01" data-seq="6">1.First Thing in the Morning</a>
+				<a class="st" id="st_01" data-seq="6" data-id="1_01">1.First Thing in the Morning</a>
 				<a class="st" id="st_02">2.Brushing Your Teeth/Flossing</a>
 				<a class="st" id="st_03">3.Taking a Shower</a>
 				<a class="st" id="st_04">4.Getting Dressed-A Man</a>
@@ -120,6 +122,7 @@
             $('#ths').click(function(){              
                 window.location.href = './index.html';
             });
+			
             $('#bg_contents').click(function(){              
 				$('#bg_contents').css('background: url("/eea/images/bg_1_01.gif") no-repeat; width: 100%; height: auto; background-size: 100%;');
             });
@@ -130,11 +133,22 @@
 				$('#eea_modal_box').css({"display": "block"});
 				
 				for_loop = $(this).data('seq'); 
+				data_id = $(this).data('id'); 
 				console.log(for_loop);
+				console.log(data_id);
 				
 				for (let i = 1; i <= for_loop; i++) {
 					$('#eea_modal_nav').append(`<a class="modal_btn" id="mbtn_${i}">${i}</a>`);
 				};
+				
+				$('#eea_mbg').css('background', 'url("eea/images/bg_1_01.gif") no-repeat center');
+				$('#eea_mbg').css('background-size', 'auto 100%');
+				$('#eea_mbg').css('background-color', '#ffffff');
+			});
+			
+			$('#eea_moal_close').on('click', function(event){
+				$('#eea_modal_box').css({"display": "none"});
+				$('.modal_btn').remove();
 			});
         });
     </script>

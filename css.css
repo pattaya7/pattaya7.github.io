@@ -275,12 +275,25 @@ audio{
 	display: block; 
 	position: relative;
 	margin: 0 auto;
-	margin-top: 5.5em;
-	width: 90%; 
+	margin-top: 3.5em;
+	width: 98%; 
 	height: 90%; 
 	background: #222222;
 	border-radius: 0.5em;
 	border: 0.2em solid #444444;
+}
+
+.eea_moal_close{
+	display: block; 
+	position: relative;
+	float: right;
+	margin-top: 0.1em; 
+	margin-right: 0.1em;
+	border-radius: 80%;
+	padding: 0.3em 0.8em;
+	background: #ff6600;
+	border: 1px solid #d28d2E;
+	font-weight: bold;
 }
 
 .eea_modal_nav{
@@ -294,10 +307,18 @@ audio{
 .modal_btn{
 	float: left;
 	display: block; 
-	border-radius: 0.25em;
-	padding: 1em;
-	margin: 1em; 
+	border-radius: 80%;
+	padding: 0.5em 1em;
+	margin: 0.5em 1em; 
 	background: #C28C2E;
 	border: 1px solid #d28d2E;
 	font-weight: bold;
+}
+
+.eea_mbg{
+	display: block; 
+	width: 98%;
+	height: 90%; 
+	margin: 0 auto;
+	margin-top: 3em;
 }
