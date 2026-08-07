@@ -38,7 +38,7 @@
 	<p id="tst"></p>
 	<p id="jst"></p>
 </div>
-<div class="out_box_eea" id="bg_contents">
+<div class="out_box_eea" id="out_box_eea">
 	<div class="section_list">
 		<ul>
 			<li>
@@ -139,6 +139,7 @@
 			event.preventDefault(); // Prevents the link from navigating to a new URL
 			
 			$('#eea_modal_box').css({"display": "block"});
+			$('#out_box_eea').css({"display": "none"});
 			
 			for_loop_prev = $(this).prev().data('seq'); 
 			for_loop = $(this).data('seq');
@@ -199,6 +200,7 @@
 		});
 		
 		$('#eea_moal_close').on('click', function(event){
+			$('#out_box_eea').css({"display": "block"});
 			$('#eea_modal_box').css({"display": "none"});
 			$('.modal_btn').remove();
 		});
