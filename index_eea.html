@@ -36,6 +36,7 @@
 	<a id="last_close">X</a>
 	<p id="est"></p>
 	<p id="tst"></p>
+	<p id="jst"></p>
 </div>
 <div class="out_box_eea" id="bg_contents">
 	<div class="section_list">
@@ -125,6 +126,7 @@
 <div style="display: none;">
 	<p id="est_1_01">His alarm clock rings...</p>
 	<p id="tst_1_01">นาฬิกาปลุกของเขาดังขึ้น...</p>
+	<p id="jst_1_01">彼の目覚まし時計が鳴っている…</p>
 </div>
 
 <script type="text/javascript">
@@ -177,10 +179,12 @@
 				var this_num = $(this).data('id');
 				var est = $('#est_'+this_num).text();
 				var tst = $('#tst_'+this_num).text();
+				var jst = $('#jst_'+this_num).text();
 				//console.log(this_num, est, tst);
 				
 				$('#est').text(est);
 				$('#tst').text(tst);
+				$('#jst').text(jst);
 			});
 			
 			$('#last_close').on('click', function(event) {
@@ -190,6 +194,7 @@
 				
 				$('#est').text('');
 				$('#tst').text('');
+				$('#jst').text('');
 			});
 		});
 		
