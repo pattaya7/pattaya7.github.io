@@ -149,9 +149,11 @@
 					$('#eea_modal_nav').append(`<a class="modal_btn" id="mbtn_${i}">${i}</a>`);
 				};
 				
-				$('#eea_mbg').css('background', 'url('+bg_url+') no-repeat center');
-				$('#eea_mbg').css('background-size', 'auto 100%');
-				$('#eea_mbg').css('background-color', '#ffffff');
+				$('#eea_mbg').css({
+					'background': 'url('+bg_url+') no-repeat center',
+					'background-size':'contain',
+					'background-color':'white'
+				});
 			});
 			
 			$('#eea_moal_close').on('click', function(event){
