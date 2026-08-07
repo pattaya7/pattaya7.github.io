@@ -32,13 +32,18 @@
 		<div class="eea_mbg" id="eea_mbg"></div>
 	</div>
 </div>
+<div class="last_modal" id="last_modal">
+	<a id="last_close">X</a>
+	<p id="est"></p>
+	<p id="tst"></p>
+</div>
 <div class="out_box_eea" id="bg_contents">
 	<div class="section_list">
 		<ul>
 			<li>
 				<a class="st_title">SECTION 1: STARTING THE DAY</a>
-				<a class="st" id="st_01" data-seq="6" data-id="1_01">1.First Thing in the Morning</a>
-				<a class="st" id="st_02" data-seq="15" data-id="1_02">2.Brushing Your Teeth/Flossing</a>
+				<a class="st" id="st_01" data-seq="6" data-id="1_01" data-chapter="1">1.First Thing in the Morning</a>
+				<a class="st" id="st_02" data-seq="15" data-id="1_02" data-chapter="1">2.Brushing Your Teeth/Flossing</a>
 				<a class="st" id="st_03">3.Taking a Shower</a>
 				<a class="st" id="st_04">4.Getting Dressed-A Man</a>
 				<a class="st" id="st_05">5.Getting Dressed-A Woman</a>
@@ -48,7 +53,7 @@
 				<a class="st" id="st_09">9.Frying an Egg</a>
 				<a class="st" id="st_10">10.Eating Breakfast</a>
 				<a class="st" id="st_11">11.Leaving the House</a>
-			<li>
+			</li>
 			<li>
 				<a class="st_title">SECTION 2: GETTING AROUND</a>
 				<a class="st" id="st_12">12.Taking a Bus/Driving a Car</a>
@@ -59,7 +64,7 @@
 				<a class="st" id="st_17">17.Taking a Texi</a>
 				<a class="st" id="st_18">18.Walking Somewhere</a>
 				<a class="st" id="st_19">19.Riding a Bicycle</a>
-			<li>
+			</li>
 			<li>
 				<a class="st_title">SECTION 3: AT HOME IN THE EVENING</a>
 				<a class="st" id="st_20">20.Returning Home/Making Dinner</a>
@@ -77,7 +82,7 @@
 				<a class="st" id="st_32">32.Watching a Video</a>
 				<a class="st" id="st_33">33.Babysitting</a>
 				<a class="st" id="st_34">34.Going to Bed</a>
-			<li>
+			</li>
 			<li>
 				<a class="st_title">SECTION 4: MANAGING A HOUSEHOLD</a>
 				<a class="st" id="st_35">35.Doing Laundry</a>
@@ -96,7 +101,7 @@
 				<a class="st" id="st_48">48.Paying for Things</a>
 				<a class="st" id="st_49">49.Going to a Bank</a>
 				<a class="st" id="st_50">50.Using an ATM</a>
-			<li>
+			</li>
 			<li>
 				<a class="st_title">SECTION 5: KEEPING IN TOUCH</a>
 				<a class="st" id="st_51">51.Making a Phone Call</a>
@@ -106,61 +111,93 @@
 				<a class="st" id="st_55">55.Using an Answering Machine</a>
 				<a class="st" id="st_56">56.Writing a Personal Letter</a>
 				<a class="st" id="st_57">57.Mailing a letter</a>
-			<li>
+			</li>
 			<li>
 				<a class="st_title">SECTION 6: HAVING FUN WITH FRIENDS</a>
 				<a class="st" id="st_58">58.Going to a Birthday Party</a>
 				<a class="st" id="st_59">59.Going to a Dinner Party</a>
 				<a class="st" id="st_60">60.Going to a Movie</a>
 				<a class="st" id="st_61">61.Eating at a Fast Food Restaurant</a>
-			<li>
+			</li>
 		</ul>
 	</div>
 </div>
+<div style="display: none;">
+	<p id="est_1_01">His alarm clock rings...</p>
+	<p id="tst_1_01">นาฬิกาปลุกของเขาดังขึ้น...</p>
+</div>
 
-    <script type="text/javascript">
-        $(document).ready(function(){   
-            $('#ths').click(function(){              
-                window.location.href = './index.html';
-            });
+<script type="text/javascript">
+	$(document).ready(function(){   
+		$('#ths').click(function(){              
+			window.location.href = './index.html';
+		});
+		
+		$('.st').on('click', function(event) {
+			event.preventDefault(); // Prevents the link from navigating to a new URL
 			
-            $('#bg_contents').click(function(){              
-				$('#bg_contents').css('background: url("/eea/images/bg_1_01.gif") no-repeat; width: 100%; height: auto; background-size: 100%;');
-            });
+			$('#eea_modal_box').css({"display": "block"});
 			
-			$('.st').on('click', function(event) {
+			for_loop_prev = $(this).prev().data('seq'); 
+			for_loop = $(this).data('seq');
+			chapter = $(this).data('chapter');
+			//console.log(for_loop_prev);
+			//console.log(for_loop); 
+			//console.log(chapter); 
+			start_num = 1;
+			if (for_loop > 10){
+				start_num = for_loop_prev + 1;
+			};
+			
+			data_id = $(this).data('id'); 
+			bg_url = '"eea/images/bg_'+data_id+'.gif"';
+			//console.log(data_id);
+			
+			for (let i = start_num; i <= for_loop; i++) {
+	
+				var j = i;
+	
+				if (j<10){
+					j = '0'+j;
+				}
+				
+				$('#eea_modal_nav').append(`<a class="modal_btn" data-id="${chapter}_${j}">${i}</a>`);
+			};
+			
+			$('#eea_mbg').css({
+				'background': 'url('+bg_url+') no-repeat center #ffffff',
+				'background-size':'contain'
+			});
+			
+			$('.modal_btn').on('click', function(event) {
 				event.preventDefault(); // Prevents the link from navigating to a new URL
 				
-				$('#eea_modal_box').css({"display": "block"});
+				$('#last_modal').css({"display": "block"});
 				
-				for_loop_prev = $(this).prev().data('seq'); 
-				for_loop = $(this).data('seq');
-				//console.log(for_loop_prev);
-				//console.log(for_loop); 
-				start_num = 1;
-				if (for_loop > 10){
-					start_num = for_loop_prev + 1;
-				};
+				var this_num = $(this).data('id');
+				var est = $('#est_'+this_num).text();
+				var tst = $('#tst_'+this_num).text();
+				//console.log(this_num, est, tst);
 				
-				data_id = $(this).data('id'); 
-				bg_url = '"eea/images/bg_'+data_id+'.gif"';
-				//console.log(data_id);
-				
-				for (let i = start_num; i <= for_loop; i++) {
-					$('#eea_modal_nav').append(`<a class="modal_btn" id="mbtn_${i}">${i}</a>`);
-				};
-				
-				$('#eea_mbg').css({
-					'background': 'url('+bg_url+') no-repeat center #ffffff',
-					'background-size':'contain'
-				});
+				$('#est').text(est);
+				$('#tst').text(tst);
 			});
 			
-			$('#eea_moal_close').on('click', function(event){
-				$('#eea_modal_box').css({"display": "none"});
-				$('.modal_btn').remove();
+			$('#last_close').on('click', function(event) {
+				event.preventDefault(); // Prevents the link from navigating to a new URL
+				
+				$('#last_modal').css({"display": "none"});
+				
+				$('#est').text('');
+				$('#tst').text('');
 			});
-        });
-    </script>
+		});
+		
+		$('#eea_moal_close').on('click', function(event){
+			$('#eea_modal_box').css({"display": "none"});
+			$('.modal_btn').remove();
+		});
+	});
+</script>
 </body>
 </html>

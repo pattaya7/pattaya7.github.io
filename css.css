@@ -290,9 +290,9 @@ audio{
 	margin-right: 0.1em;
 	border-radius: 80%;
 	padding: 0.3em 0.8em;
-	background: #ff6600;
-	border: 1px solid #d28d2E;
+	border: 1px solid white;
 	font-weight: bold;
+	color: white;
 }
 
 .eea_modal_nav{
@@ -321,3 +321,44 @@ audio{
 	margin: 0 auto;
 	margin-top: 3em;
 }
+
+.last_modal{
+	z-index: 999; 
+	position: relative; 
+	margin: 3.3em auto; 
+	display: none; 
+	width: 98%; 
+	padding: 1.5em; 
+	background: #336699; 
+	border: 0.2em solid #538cc6; 
+	text-align: center;
+}
+
+#est{
+	position: relative; 
+	margin: 0 auto; 
+	display: block; 
+	text-align: center;
+	font-size: 2em;
+	color: #00cc00;
+}
+
+#tst{
+	position: relative; 
+	margin: 0 auto; 
+	display: block;  
+	text-align: center;
+	font-size: 3em;
+	color: #ff9900;
+}
+
+#last_close{
+	display: table;
+	position: relative;
+	padding: 0.2em 0.7em;
+	margin: 0 auto;
+	border: 1px solid white;
+	border-radius: 1.8em;
+	color: white;
+}
+
