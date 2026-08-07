@@ -308,7 +308,7 @@ audio{
 	display: block; 
 	border-radius: 0.2em;
 	padding: 1em;
-	margin: 0.5em 1em; 
+	margin: 0.3em; 
 	background: #C28C2E;
 	border: 1px solid #d28d2E;
 	font-weight: bold;
@@ -328,7 +328,7 @@ audio{
 	margin: 3.3em auto; 
 	display: none; 
 	width: 98%; 
-	padding: 1.5em; 
+	padding: 1.5em 0; 
 	background: #336699; 
 	border: 0.2em solid #538cc6; 
 	text-align: center;
