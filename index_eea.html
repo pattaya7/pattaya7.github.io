@@ -37,7 +37,7 @@
 			<li>
 				<a class="st_title">SECTION 1: STARTING THE DAY</a>
 				<a class="st" id="st_01" data-seq="6" data-id="1_01">1.First Thing in the Morning</a>
-				<a class="st" id="st_02">2.Brushing Your Teeth/Flossing</a>
+				<a class="st" id="st_02" data-seq="15" data-id="1_02">2.Brushing Your Teeth/Flossing</a>
 				<a class="st" id="st_03">3.Taking a Shower</a>
 				<a class="st" id="st_04">4.Getting Dressed-A Man</a>
 				<a class="st" id="st_05">5.Getting Dressed-A Woman</a>
@@ -132,16 +132,24 @@
 				
 				$('#eea_modal_box').css({"display": "block"});
 				
-				for_loop = $(this).data('seq'); 
-				data_id = $(this).data('id'); 
-				console.log(for_loop);
-				console.log(data_id);
+				for_loop_prev = $(this).prev().data('seq'); 
+				for_loop = $(this).data('seq');
+				//console.log(for_loop_prev);
+				//console.log(for_loop); 
+				start_num = 1;
+				if (for_loop > 10){
+					start_num = for_loop_prev + 1;
+				};
 				
-				for (let i = 1; i <= for_loop; i++) {
+				data_id = $(this).data('id'); 
+				bg_url = '"eea/images/bg_'+data_id+'.gif"';
+				//console.log(data_id);
+				
+				for (let i = start_num; i <= for_loop; i++) {
 					$('#eea_modal_nav').append(`<a class="modal_btn" id="mbtn_${i}">${i}</a>`);
 				};
 				
-				$('#eea_mbg').css('background', 'url("eea/images/bg_1_01.gif") no-repeat center');
+				$('#eea_mbg').css('background', 'url('+bg_url+') no-repeat center');
 				$('#eea_mbg').css('background-size', 'auto 100%');
 				$('#eea_mbg').css('background-color', '#ffffff');
 			});

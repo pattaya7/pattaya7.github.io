@@ -307,8 +307,8 @@ audio{
 .modal_btn{
 	float: left;
 	display: block; 
-	border-radius: 80%;
-	padding: 0.5em 1em;
+	border-radius: 0.2em;
+	padding: 1em;
 	margin: 0.5em 1em; 
 	background: #C28C2E;
 	border: 1px solid #d28d2E;
