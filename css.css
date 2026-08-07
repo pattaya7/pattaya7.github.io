@@ -352,6 +352,15 @@ audio{
 	color: #ff9900;
 }
 
+#jst{
+	position: relative; 
+	margin: 0 auto; 
+	display: block;  
+	text-align: center;
+	font-size: 3em;
+	color: #ff5050;
+}
+
 #last_close{
 	display: table;
 	position: relative;
