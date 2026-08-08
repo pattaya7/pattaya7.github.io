@@ -181,16 +181,15 @@
 				var est = $('#est_'+this_num).text();
 				var tst = $('#tst_'+this_num).text();
 				var jst = $('#jst_'+this_num).text();
-				//console.log(this_num, est, tst);
-				
-				$('#est').append('<audio id="audio_est" src="./eea_audio/e_${this_num}.m4a" controls="1"></audio>');
-				$('#est').append('<audio id="audio_tst" src="./eea_audio/t_${this_num}.m4a" controls="1"></audio>');
-				$('#est').append('<audio id="audio_jst" src="./eea_audio/j_${this_num}.m4a" controls="1"></audio>');
-				
+				//console.log(this_num, est, tst);				
 				
 				$('#est').text(est);
 				$('#tst').text(tst);
 				$('#jst').text(jst);
+				
+				$('#est').append('<audio id="audio_est" src="./eea_audio/e_'+this_num+'.m4a" controls="1"></audio>');
+				$('#tst').append('<audio id="audio_tst" src="./eea_audio/t_'+this_num+'.m4a" controls="1"></audio>');
+				$('#jst').append('<audio id="audio_jst" src="./eea_audio/j_'+this_num+'.m4a" controls="1"></audio>');
 			});
 			
 			$('#last_close').on('click', function(event) {

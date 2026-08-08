@@ -371,3 +371,6 @@ audio{
 	color: white;
 }
 
+#audio_est, #audio_tst, #audio_jst{
+	font-size: 12px;
+}
