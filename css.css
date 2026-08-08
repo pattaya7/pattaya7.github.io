@@ -80,12 +80,6 @@ audio{
 	padding-left: 1em;
 }
 
-.audio{
-	width: 2em;
-	height: 0.5em;
-	padding-left: 0.5em;
-}
-
 .lyric_box{
 	margin: 0.2em auto; 
 	left: 2em;
@@ -373,4 +367,7 @@ audio{
 
 #audio_est, #audio_tst, #audio_jst{
 	font-size: 12px;
+	width: 9em;
+	height: 2em;
+	padding-left: 0.5em;
 }
