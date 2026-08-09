@@ -244,9 +244,14 @@
 				$('#tst').text(tst);
 				$('#jst').text(jst);
 				
-				$('#est').append('<audio id="audio_est" src="./eea_audio/'+chapter+'/e_'+this_num+'.m4a" controls="1"></audio>');
-				$('#tst').append('<audio id="audio_tst" src="./eea_audio/'+chapter+'/t_'+this_num+'.m4a" controls="1"></audio>');
-				$('#jst').append('<audio id="audio_jst" src="./eea_audio/'+chapter+'/j_'+this_num+'.m4a" controls="1"></audio>');
+				var folder_num = chapter;
+				if (folder_num <10){
+					folder_num = '0' + folder_num;
+				}
+				
+				$('#est').append('<audio id="audio_est" src="./eea_audio/'+folder_num+'/e_'+this_num+'.m4a" controls="1"></audio>');
+				$('#tst').append('<audio id="audio_tst" src="./eea_audio/'+folder_num+'/t_'+this_num+'.m4a" controls="1"></audio>');
+				$('#jst').append('<audio id="audio_jst" src="./eea_audio/'+folder_num+'/j_'+this_num+'.m4a" controls="1"></audio>');
 			});
 			
 			$('#last_close').on('click', function(event) {
