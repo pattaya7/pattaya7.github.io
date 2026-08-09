@@ -244,9 +244,9 @@
 				$('#tst').text(tst);
 				$('#jst').text(jst);
 				
-				$('#est').append('<audio id="audio_est" src="./eea_audio/e_'+this_num+'.m4a" controls="1"></audio>');
-				$('#tst').append('<audio id="audio_tst" src="./eea_audio/t_'+this_num+'.m4a" controls="1"></audio>');
-				$('#jst').append('<audio id="audio_jst" src="./eea_audio/j_'+this_num+'.m4a" controls="1"></audio>');
+				$('#est').append('<audio id="audio_est" src="./eea_audio/'+chapter+'/e_'+this_num+'.m4a" controls="1"></audio>');
+				$('#tst').append('<audio id="audio_tst" src="./eea_audio/'+chapter+'/t_'+this_num+'.m4a" controls="1"></audio>');
+				$('#jst').append('<audio id="audio_jst" src="./eea_audio/'+chapter+'/j_'+this_num+'.m4a" controls="1"></audio>');
 			});
 			
 			$('#last_close').on('click', function(event) {
