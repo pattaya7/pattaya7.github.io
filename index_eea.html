@@ -1080,7 +1080,7 @@
 		<p id="jst_15_14">右折</p>
 		
 		<p id="est_15_15">Going straight</p>
-		<p id="tst_15_15">มุ่งหน้าตรงไป</p>
+		<p id="tst_15_15">ตรงไป</p>
 		<p id="jst_15_15">真っ直ぐ進む</p>
 		
 		<p id="est_15_16">Entering a freeway</p>
@@ -1154,8 +1154,10 @@
 			$('#eea_modal_box').css({"display": "block"});
 			$('#out_box_eea').css({"display": "none"});
 			
+			for_loop_prev_prev = $(this).prev().prev().data('seq'); 
 			for_loop_prev = $(this).prev().data('seq'); 
 			for_loop = $(this).data('seq');
+			chapter_prev_prev = $(this).prev().prev().data('chapter');
 			chapter_prev = $(this).prev().data('chapter');
 			chapter = $(this).data('chapter');
 			//console.log(for_loop_prev);
@@ -1163,8 +1165,14 @@
 			console.log(chapter); 
 			console.log(chapter_prev); 
 			start_num = 1;
+			
 			if (chapter == chapter_prev){
 				start_num = for_loop_prev + 1;
+				for_loop = for_loop_prev +for_loop;
+			};
+			
+			if (chapter_prev == chapter_prev_prev){
+				start_num = for_loop_prev_prev + for_loop_prev + 1;
 				for_loop = for_loop_prev +for_loop;
 			};
 			
