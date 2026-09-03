@@ -1162,19 +1162,27 @@
 			chapter = $(this).data('chapter');
 			//console.log(for_loop_prev);
 			//console.log(for_loop); 
-			console.log(chapter); 
-			console.log(chapter_prev); 
+			console.log('chapter=',chapter); 
+			console.log('chapter_prev=',chapter_prev); 
 			start_num = 1;
 			
-			if (chapter == chapter_prev){
-				start_num = for_loop_prev + 1;
-				for_loop = for_loop_prev +for_loop;
-			};
+			if (chapter_prev != undefined)
+			{
+				if (chapter == chapter_prev){
+					start_num = for_loop_prev + 1;
+					for_loop = for_loop_prev +for_loop;
+					console.log('here');
+				};
+				
+				if ((chapter == chapter_prev)&&(chapter_prev == chapter_prev_prev)){
+					start_num = for_loop_prev_prev + for_loop_prev + 1;
+					for_loop = for_loop_prev +for_loop;
+					console.log('here2');
+				};
+			}
 			
-			if (chapter_prev == chapter_prev_prev){
-				start_num = for_loop_prev_prev + for_loop_prev + 1;
-				for_loop = for_loop_prev +for_loop;
-			};
+			console.log('start_num=',start_num); 
+			console.log('for_loop=',for_loop);
 			
 			data_id = $(this).data('id'); 
 			bg_url = '"eea/images/bg_'+data_id+'.gif"';
