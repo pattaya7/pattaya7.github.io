@@ -1493,6 +1493,10 @@
 			window.location.href = './index_eea.html';
 		});
 		
+		h_button = $('#eea').height();
+		
+		$('#eea_modal_box').css({'margin-top':h_button});
+		
 		$('.st').on('click', function(event) {
 			event.preventDefault(); // Prevents the link from navigating to a new URL
 			
