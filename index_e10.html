@@ -1433,8 +1433,8 @@
 			chapter = $(this).data('chapter');
 			//console.log(for_loop_prev);
 			//console.log(for_loop); 
-			console.log('chapter=',chapter); 
-			console.log('chapter_prev=',chapter_prev); 
+			//console.log('chapter=',chapter); 
+			//console.log('chapter_prev=',chapter_prev); 
 			start_num = 1;
 			
 			if (chapter_prev != undefined)
@@ -1442,21 +1442,21 @@
 				if (chapter == chapter_prev){
 					start_num = for_loop_prev + 1;
 					for_loop = for_loop_prev +for_loop;
-					console.log('here');
+					//console.log('here');
 				};
 				
 				if ((chapter == chapter_prev)&&(chapter_prev == chapter_prev_prev)){
 					start_num = for_loop_prev_prev + for_loop_prev + 1;
 					for_loop = for_loop_prev +for_loop;
-					console.log('here2');
+					//console.log('here2');
 				};
 			}
 			
-			console.log('start_num=',start_num); 
-			console.log('for_loop=',for_loop);
+			//console.log('start_num=',start_num); 
+			//console.log('for_loop=',for_loop);
 			
 			data_id = $(this).data('id'); 
-			bg_url = '"e10/images/bg_'+data_id+'.PNG"';
+			bg_url = '"e10/images/p_'+data_id+'.PNG"';
 			//console.log(data_id);
 			
 			for (let i = start_num; i <= for_loop; i++) {
