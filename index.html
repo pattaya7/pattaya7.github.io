@@ -23,6 +23,7 @@
 <div class="top_nav">
 	<div class="top_nav_btn" id="ths">THS</div>
 	<div class="top_nav_btn" id="eea">EEA</div>
+	<div class="top_nav_btn" id="e10">E10</div>
 </div>
 <div class="eea_top"></div>
 <div class="out_box" id="change_contents">
@@ -69,9 +70,15 @@
     <script type="text/javascript">
         $(document).ready(function(){   
             $('#right_box').load('./palmy_lyric_page1.html');
+			
             $('#eea').click(function(){              
                 window.location.href = './index_eea.html';
             });
+			
+            $('#e10').click(function(){              
+                window.location.href = './index_e10.html';
+            });
+			
             $('#plamy_button1').click(function(){              
                 $('#right_box').load('palmy_lyric_page1.html');
             });
