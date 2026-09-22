@@ -38,6 +38,18 @@ body {
 	border-radius: 0.5em 0.5em 0 0;
 }
 
+#eea_chapter{
+	display: block;
+	float: right;
+	padding: 0.15em 1em;
+	margin-right: 0.2em;
+	margin-top: 0.2em;
+	float: right;
+	right: 0; 
+	font-size: 1.5em;
+	color: yellow;
+}
+
 .out_box{
 	display: block;
 	position: absolute;
