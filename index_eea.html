@@ -2168,13 +2168,16 @@
 			$('.modal_btn').on('click', function(event) {
 				event.preventDefault(); // Prevents the link from navigating to a new URL
 				
+				var this_btn_num = $(this).text();
+				$('#eea_chapter').text("eea-"+chapter+"-"+this_btn_num);
+							
 				$('#last_modal').css({"display": "block"});
 				
 				var this_num = $(this).data('id');
 				var est = $('#est_'+this_num).text();
 				var tst = $('#tst_'+this_num).text();
 				var jst = $('#jst_'+this_num).text();
-				//console.log(this_num, est, tst);				
+				console.log(this_num, est, tst);				
 				
 				$('#est').text(est);
 				$('#tst').text(tst);
