@@ -3007,8 +3007,8 @@
 			chapter_prev_prev = $(this).prev().prev().data('chapter');
 			chapter_prev = $(this).prev().data('chapter');
 			chapter = $(this).data('chapter');
-			//console.log(for_loop_prev);
-			//console.log(for_loop); 
+			console.log(for_loop_prev);
+			console.log(for_loop); 
 			//console.log('chapter=',chapter); 
 			//console.log('chapter_prev=',chapter_prev); 
 			$('#eea_chapter').text("eea-"+chapter);
@@ -3016,21 +3016,25 @@
 			
 			if (chapter_prev != undefined)
 			{
-				if (chapter == chapter_prev){
-					start_num = for_loop_prev + 1;
-					for_loop = for_loop_prev +for_loop;
-					console.log('here');
-				};
-				
-				if ((chapter == chapter_prev)&&(chapter_prev == chapter_prev_prev)){
+				if ((chapter == chapter_prev)&&(chapter_prev == chapter_prev_prev))
+				{
 					start_num = for_loop_prev_prev + for_loop_prev + 1;
-					for_loop = for_loop_prev +for_loop;
+					for_loop = start_num + for_loop - 1;
 					console.log('here2');
+				}
+				else
+				{ 
+					if (chapter == chapter_prev){
+						start_num = for_loop_prev + 1;
+						for_loop = for_loop_prev +for_loop;
+						console.log('here');
+						
+					}
 				};
 			}
 			
-			//console.log('start_num=',start_num); 
-			//console.log('for_loop=',for_loop);
+			console.log('start_num=',start_num); 
+			console.log('for_loop=',for_loop);
 			
 			data_id = $(this).data('id'); 
 			bg_url = '"eea/images/bg_'+data_id+'.gif"';
