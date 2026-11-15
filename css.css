@@ -13,6 +13,12 @@ body {
 	overflow-x: hidden;
 }
 
+input {
+	float: left; 
+	width:40% !important;
+	background: white !important;
+}
+
 .top_nav {
 	display: block;
 	position: absolute;
