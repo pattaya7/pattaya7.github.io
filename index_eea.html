@@ -30,6 +30,7 @@
 	<div class="top_nav_btn" id="eea">EEA</div>
 	<div class="top_nav_btn" id="e10">E10</div>
 	<div id="eea_chapter"></div>
+	<input type="text" id="input_position" value="0">
 </div>
 <div class="eea_top"></div>
 <div class="eea_modal_box" id="eea_modal_box">
@@ -3431,12 +3432,12 @@
 		
 		$('#eea_modal_box').css({'margin-top':h_button});
 		
-		$('#eea_modal_box').bind('swipeleft', function(){
-			console.log('swiped');
-		});
-		
 		$('.st').on('click', function(event) {
 			event.preventDefault(); // Prevents the link from navigating to a new URL
+			
+			position_id = $(this).attr('id');
+			$('#input_position').val(position_id).trigger('change');
+			console.log(position_id);
 			
 			$('#eea_modal_box').css({"display": "block"});
 			$('#out_box_eea').css({"display": "none"});
@@ -3539,6 +3540,10 @@
 			$('#out_box_eea').css({"display": "block"});
 			$('#eea_modal_box').css({"display": "none"});
 			$('.modal_btn').remove();
+		});
+		
+		$('#eea_modal_box').bind('swipeleft', function(){
+			console.log('swiped');
 		});
 	});
 </script>
