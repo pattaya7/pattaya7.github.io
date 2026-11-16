@@ -3547,7 +3547,7 @@
 			$('.modal_btn').remove();
 		});
 		
-		$('#eea_modal_box').bind('swiperight', function(){
+		/*$('#eea_modal_box').bind('swiperight', function(){
 			position_id = $('#input_position').val();
 			position_data_id = $('#input_position_data_id').val();
 			//console.log(position_id);
@@ -3585,7 +3585,7 @@
 			$('#eea_moal_close').trigger('click');
 			
 			$('#'+reposition_id+'[data-id="'+reposition_data_id+'"]').trigger('click');
-		});
+		});*/
 		
 		$('#eea_modal_box').on('dblclick', function(){
 			$('#last_close').trigger('click');
@@ -3617,8 +3617,23 @@
 				$('#'+reposition_id+'[data-id="'+reposition_data_id+'"]').trigger('click');
 			},
 			swipeRight:function(event, direction, distance, duration) {
+				position_id = $('#input_position').val();
+				position_data_id = $('#input_position_data_id').val();
+				//console.log(position_id);
+				//console.log(position_data_id);
+				
+				reposition_id = $('#'+position_id+'[data-id="'+position_data_id+'"]').prev().attr('id');
+				reposition_data_id = $('#'+position_id+'[data-id="'+position_data_id+'"]').prev().attr('data-id');
+				console.log(reposition_id);
+				console.log(reposition_data_id);
+				
+				$('#input_position').val(reposition_id).trigger('change');
+				$('#input_position_data_id').val(reposition_data_id).trigger('change');
+				
 				$('#last_close').trigger('click');
 				$('#eea_moal_close').trigger('click');
+				
+				$('#'+reposition_id+'[data-id="'+reposition_data_id+'"]').trigger('click');
 			},
 
 			threshold:100,
