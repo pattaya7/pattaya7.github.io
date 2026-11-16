@@ -3546,7 +3546,7 @@
 			$('.modal_btn').remove();
 		});
 		
-		$('#eea_modal_box').bind('swipeleft', function(){
+		$('#eea_modal_box').bind('swiperight', function(){
 			position_id = $('#input_position').val();
 			position_data_id = $('#input_position_data_id').val();
 			//console.log(position_id);
@@ -3566,7 +3566,7 @@
 			$('#'+reposition_id+'[data-id="'+reposition_data_id+'"]').trigger('click');
 		});
 		
-		$('#eea_modal_box').bind('swiperight', function(){
+		$('#eea_modal_box').bind('swipeleft', function(){
 			position_id = $('#input_position').val();
 			position_data_id = $('#input_position_data_id').val();  
 			//console.log(position_id);
