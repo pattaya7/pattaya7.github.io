@@ -10,12 +10,13 @@
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
 
 	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 	
 	<!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> -->
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 	<script src="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="jquery.touchSwipe.min.js"></script>
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -3589,6 +3590,16 @@
 		$('#eea_modal_box').on('dblclick', function(){
 			$('#last_close').trigger('click');
 			$('#eea_moal_close').trigger('click');
+		});
+		
+		$('#eea_modal_box').swipe( {
+			swipeUp:function(event, direction, distance, duration) {
+				$('#last_close').trigger('click');
+				$('#eea_moal_close').trigger('click');
+			},
+
+			threshold:100,
+			allowPageScroll:"vertical"
 		});
 	});
 </script>
