@@ -109,7 +109,7 @@ audio{
 	border-radius: 1em;
 	border: 1px solid #444444;*/
 	color: #fff;
-	font-size: 2em;
+	/* font-size: 2em; */
 	padding: 1em;
 	/*overflow: scroll;*/
 	overflow: overlay;
