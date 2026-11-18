@@ -318,8 +318,7 @@ audio{
 .modal_btn{
 	display: inline-block;
 	border-radius: 0.2em;
-	width: 30%;
-	padding: 1em 0;
+	padding: 1.5em 1.2em;
 	/* padding: 0.7em 0.3em; */
 	margin: 0.15em;
 	background: rgb(200,100,50,0.5);
