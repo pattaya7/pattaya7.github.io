@@ -313,14 +313,18 @@ audio{
 	left: -100%;
 	background: rgb(190,190,80,0.7);
 	border-radius: 1em;
+	width: 50%;
+	padding: 5%;
+	margin-top: 20%;
 }
 
 .modal_btn{
 	display: inline-block;
 	border-radius: 0.2em;
-	padding: 1.5em 1.2em;
+	width: 35%;
+	padding: 1em 0;
 	/* padding: 0.7em 0.3em; */
-	margin: 0.15em;
+	margin: 1%;
 	background: rgb(200,100,50,0.5);
 	border: 1px solid #d28d2E;
 	font-weight: bold;

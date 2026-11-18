@@ -3635,11 +3635,11 @@
 		
 		$('#eea_mbg').on('click', function(event){
 			$('#last_close').trigger('click');
-			$('.eea_modal_nav').animate({"left": 0},500);
+			$('.eea_modal_nav').animate({"left": "25%"},500);
 		});
 		
 		$('#eea_modal_nav').on('click', function(event){
-			$('.eea_modal_nav').animate({"left": "-100%"},500);
+			$('.eea_modal_nav').animate({"left": "-125%"},500);
 		});
 			
 		$('#last_close').on('click', function(event) {
@@ -3653,7 +3653,7 @@
 		});
 		
 		$('#eea_moal_close').on('click', function(event){
-			$('.eea_modal_nav').animate({"left": "-100%"},500);
+			$('.eea_modal_nav').animate({"left": "-125%"},500);
 			$('#out_box_eea').css({"display": "block"});
 			$('#eea_modal_box').css({"display": "none"});
 			$('.modal_btn').remove();
