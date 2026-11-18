@@ -4,6 +4,7 @@
     font-family: sans-serif;
     list-style: none;
     text-decoration: none;
+	-webkit-text-size-adjust: none; /* iOS Safari, 구형 Chrome 등 */
 }
 
 body {
