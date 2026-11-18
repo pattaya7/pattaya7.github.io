@@ -305,20 +305,24 @@ audio{
 }
 
 .eea_modal_nav{
-	display: block; 
+	z-index: 999;
+	display: table; 
 	position: relative;
-	margin: 0 auto;
-	margin-top: 1em; 
 	text-align: center;
+	float: left;
+	left: -100%;
+	background: rgb(190,190,80,0.7);
+	border-radius: 1em;
 }
 
 .modal_btn{
-	float: left;
-	display: block; 
+	display: inline-block;
 	border-radius: 0.2em;
-	padding: 0.7em;
-	margin: 0.15em; 
-	background: #C28C2E;
+	width: 30%;
+	padding: 1em 0;
+	/* padding: 0.7em 0.3em; */
+	margin: 0.15em;
+	background: rgb(200,100,50,0.5);
 	border: 1px solid #d28d2E;
 	font-weight: bold;
 }

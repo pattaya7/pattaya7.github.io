@@ -3632,6 +3632,15 @@
 				$('#jst').append('<audio id="audio_jst" src="./eea_audio/'+folder_num+'/j_'+this_num+'.m4a" controls="1"></audio>');
 			});
 		});
+		
+		$('#eea_mbg').on('click', function(event){
+			$('#last_close').trigger('click');
+			$('.eea_modal_nav').animate({"left": 0},500);
+		});
+		
+		$('#eea_modal_nav').on('click', function(event){
+			$('.eea_modal_nav').animate({"left": "-100%"},500);
+		});
 			
 		$('#last_close').on('click', function(event) {
 			event.preventDefault(); // Prevents the link from navigating to a new URL
@@ -3644,6 +3653,7 @@
 		});
 		
 		$('#eea_moal_close').on('click', function(event){
+			$('.eea_modal_nav').animate({"left": "-100%"},500);
 			$('#out_box_eea').css({"display": "block"});
 			$('#eea_modal_box').css({"display": "none"});
 			$('.modal_btn').remove();
