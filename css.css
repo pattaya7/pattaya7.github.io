@@ -310,6 +310,7 @@ audio{
 	display: table; 
 	position: relative;
 	text-align: center;
+	font-weight: bold;
 	float: left;
 	left: -100%;
 	background: rgb(190,190,80,0.7);
