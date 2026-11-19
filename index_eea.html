@@ -3536,9 +3536,14 @@
 		
 		cw = $(window).width();
 		ch = $(window).height();
-		nav_h = (ch / 10)*6;
-		margin_h = (ch / 10)*2;
-		console.log(cw,ch,nav_h);
+		nav_h = parseInt((ch / 10)*4);
+		margin_h = parseInt(ch / 10);
+		div_ch = parseInt(ch / 20);
+		console.log(cw,ch,nav_h,margin_h);
+		
+		$('.eea_modal_nav').css({"height": nav_h+"px"});
+		$('.eea_modal_nav').css({"margin-top": margin_h+"px"});
+		$('.eea_modal_nav').css({"padding": (ch/10)+"px"});
 		
 		$('#eea_modal_box').css({'margin-top':h_button});
 		
@@ -3640,9 +3645,7 @@
 		});
 		
 		$('#eea_mbg').on('click', function(event){
-			$('#last_close').trigger('click');nav_h
-			$('.eea_modal_nav').css({"height": nav_h+"px"},500);
-			$('.eea_modal_nav').css({"margin-top": margin_h+"px"},500);
+			$('#last_close').trigger('click');
 			$('.eea_modal_nav').animate({"left": "20%"},500);
 		});
 		

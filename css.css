@@ -319,13 +319,12 @@ audio{
 	width: 50%;
 	/* height: 50%;
 	margin-top: 25%; */
-	padding: 5%;
 }
 
 .modal_btn{
 	display: inline-block;
 	border-radius: 0.2em;
-	width: 35%;
+	width: 30%;
 	padding: 1em 0;
 	/* padding: 0.7em 0.3em; */
 	margin: 1%;
