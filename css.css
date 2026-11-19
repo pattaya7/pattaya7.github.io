@@ -82,6 +82,7 @@ input {
 	height: 100%;
 	width: 80%;
 	overflow: hidden;
+    font-size: 2em;
 }
 
 /*.youtube_box{
@@ -316,9 +317,9 @@ audio{
 	background: rgb(190,190,80,0.7);
 	border-radius: 1em;
 	width: 50%;
-	height: 50%;
+	/* height: 50%;
+	margin-top: 25%; */
 	padding: 5%;
-	margin-top: 25%;
 }
 
 .modal_btn{
@@ -331,7 +332,7 @@ audio{
 	background: rgb(200,100,50,0.5);
 	border: 1px solid #d28d2E;
 	font-weight: bold;
-	font-size: 1.7em;
+    font-size: 1.7em;
 }
 
 .eea_mbg{
