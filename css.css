@@ -313,12 +313,8 @@ audio{
 	text-align: center;
 	font-weight: bold;
 	float: left;
-	left: -100%;
 	background: rgb(190,190,80,0.7);
 	border-radius: 1em;
-	width: 40%;
-	/* height: 50%;
-	margin-top: 25%; */
 }
 
 .modal_btn{
