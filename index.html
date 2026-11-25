@@ -21,8 +21,9 @@
 
 <body>
 <div class="top_nav">
-	<div class="top_nav_btn" id="ths">THS</div>
-	<div class="top_nav_btn" id="eea">EEA</div>
+	<div class="top_nav_btn" id="ths">THS</div><!-- Thai song and lyrics -->
+	<div class="top_nav_btn" id="eea">EEA</div><!-- Every day activities for English -->
+	<div class="top_nav_btn" id="smt">SMT</div><!-- Small Talks -->
 	<div class="top_nav_btn" id="e10">E10</div>
 </div>
 <div class="eea_top"></div>
@@ -67,64 +68,68 @@
 	<div>
 </div>
 
-    <script type="text/javascript">
-        $(document).ready(function(){   
-            $('#right_box').load('./palmy_lyric_page1.html');
-			
-            $('#eea').click(function(){              
-                window.location.href = './index_eea.html';
-            });
-			
-            $('#e10').click(function(){              
-                window.location.href = './index_e10.html';
-            });
-			
-            $('#plamy_button1').click(function(){              
-                $('#right_box').load('palmy_lyric_page1.html');
-            });
-            $('#plamy_button2').click(function(){              
-                $('#right_box').load('palmy_lyric_page2.html');
-            });
-            $('#texi_button1').click(function(){              
-                $('#right_box').load('texi_lyric_page1.html');
-            });
-            $('#texi_button2').click(function(){              
-                $('#right_box').load('texi_lyric_page2.html');
-            });
-            $('#texi_button3').click(function(){              
-                $('#right_box').load('texi_lyric_page3.html');
-            });
-            $('#loso_button1').click(function(){              
-                $('#right_box').load('loso_lyric_page1.html');
-            });
-            $('#loso_button2').click(function(){              
-                $('#right_box').load('loso_lyric_page2.html');
-            });
-            $('#loso_button3').click(function(){              
-                $('#right_box').load('loso_lyric_page3.html');
-            });
-            $('#loso_button4').click(function(){              
-                $('#right_box').load('loso_lyric_page4.html');
-            });
-            $('#loso_button5').click(function(){              
-                $('#right_box').load('loso_lyric_page5.html');
-            });
-            $('#loso_button6').click(function(){              
-                $('#right_box').load('loso_lyric_page6.html');
-            });
-            $('#loso_button7').click(function(){              
-                $('#right_box').load('loso_lyric_page7.html');
-            });
-            $('#loso_button8').click(function(){              
-                $('#right_box').load('loso_lyric_page8.html');
-            });
-            $('#loso_button9').click(function(){              
-                $('#right_box').load('loso_lyric_page9.html');
-            });
-            $('#loso_button10').click(function(){              
-                $('#right_box').load('loso_lyric_page10.html');
-            });
-        });
-    </script>
+<script type="text/javascript">
+	$(document).ready(function(){   
+		$('#right_box').load('./palmy_lyric_page1.html');
+		
+		$('#eea').click(function(){              
+			window.location.href = './index_eea.html';
+		});
+	
+		$('#smt').click(function(){              
+			window.location.href = './index_smt.html';
+		});
+		
+		$('#e10').click(function(){              
+			window.location.href = './index_e10.html';
+		});
+		
+		$('#plamy_button1').click(function(){              
+			$('#right_box').load('palmy_lyric_page1.html');
+		});
+		$('#plamy_button2').click(function(){              
+			$('#right_box').load('palmy_lyric_page2.html');
+		});
+		$('#texi_button1').click(function(){              
+			$('#right_box').load('texi_lyric_page1.html');
+		});
+		$('#texi_button2').click(function(){              
+			$('#right_box').load('texi_lyric_page2.html');
+		});
+		$('#texi_button3').click(function(){              
+			$('#right_box').load('texi_lyric_page3.html');
+		});
+		$('#loso_button1').click(function(){              
+			$('#right_box').load('loso_lyric_page1.html');
+		});
+		$('#loso_button2').click(function(){              
+			$('#right_box').load('loso_lyric_page2.html');
+		});
+		$('#loso_button3').click(function(){              
+			$('#right_box').load('loso_lyric_page3.html');
+		});
+		$('#loso_button4').click(function(){              
+			$('#right_box').load('loso_lyric_page4.html');
+		});
+		$('#loso_button5').click(function(){              
+			$('#right_box').load('loso_lyric_page5.html');
+		});
+		$('#loso_button6').click(function(){              
+			$('#right_box').load('loso_lyric_page6.html');
+		});
+		$('#loso_button7').click(function(){              
+			$('#right_box').load('loso_lyric_page7.html');
+		});
+		$('#loso_button8').click(function(){              
+			$('#right_box').load('loso_lyric_page8.html');
+		});
+		$('#loso_button9').click(function(){              
+			$('#right_box').load('loso_lyric_page9.html');
+		});
+		$('#loso_button10').click(function(){              
+			$('#right_box').load('loso_lyric_page10.html');
+		});
+	});
+</script>
 </body>
 </html>

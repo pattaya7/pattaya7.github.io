@@ -330,6 +330,20 @@ audio{
     font-size: 1.7em;
 }
 
+.modal_btn_smt{
+	display: inline-block;
+	border-radius: 0.2em;
+	width:45%;
+	height: 45%;
+	padding: 1em 0;
+	/* padding: 0.7em 0.3em; */
+	margin: 1%;
+	background: rgb(200,100,50,0.5);
+	border: 1px solid #d28d2E;
+	font-weight: bold;
+    font-size: 1.7em;
+}
+
 .eea_mbg{
 	display: block; 
 	width: 98%;

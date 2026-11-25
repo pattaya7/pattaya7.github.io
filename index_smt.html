@@ -1,0 +1,448 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Thai Songs and Lyrics</title>
+	
+	<link rel="stylesheet" type="text/css" href="css.css">
+    <!--font-awsome icons-->
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+
+	<!-- jQuery library -->
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+	
+	<!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" /> -->
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+	<script src="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="jquery.touchSwipe.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+<body>
+<div class="top_nav">
+	<input type="hidden" id="input_position" value="0">
+	<input type="hidden" id="input_position_data_id" value="0">
+	<div class="top_nav_btn" id="ths">THS</div><!-- Thai song and lyrics -->
+	<div class="top_nav_btn" id="eea">EEA</div><!-- Every day activities for English -->
+	<div class="top_nav_btn" id="smt">SMT</div><!-- Small Talks -->
+	<div class="top_nav_btn" id="e10">E10</div>
+	<div id="eea_chapter"></div>
+</div>
+<div class="eea_top"></div>
+<div class="eea_modal_box" id="eea_modal_box">
+	<div class="eea_modal" id="eaa_madal">
+		<div class="eea_moal_close" id="eea_moal_close">X</div>
+		<div class="eea_modal_nav" id="eea_modal_nav"></div>
+		<div class="eea_mbg" id="eea_mbg"></div>
+	</div>
+</div>
+<div class="last_modal" id="last_modal">
+	<a id="last_close">X</a>
+	<p id="est"></p>
+	<p id="tst"></p>
+	<p id="jst"></p>
+</div>
+<div class="out_box_eea" id="out_box_eea">
+	<div class="section_list">
+		<ul>
+			<li>
+				<a class="st_title">SECTION 1: GENERAL</a>
+				<a class="st" id="st_01" data-seq="2" data-id="1_01" data-chapter="1">Day/Weekend</a>
+				<a class="st" id="st_01" data-seq="2" data-id="1_02" data-chapter="1">Hobby/Watch</a>
+				<a class="st" id="st_01" data-seq="2" data-id="1_03" data-chapter="1">Music/Pets</a>
+				<a class="st" id="st_01" data-seq="2" data-id="1_04" data-chapter="1">Favourite/Book</a>
+			</li>
+			<li>
+				<a class="st_title">SECTION 2: GETTING AROUND</a>
+				<a class="st" id="st_12" data-seq="7" data-id="12_01" data-chapter="12">12.Taking a Bus/Driving a Car</a>
+				<a class="st" id="st_12" data-seq="16" data-id="12_02" data-chapter="12">12.Taking a Bus/Driving a Car-2</a>
+				<a class="st" id="st_13" data-seq="8" data-id="13_01" data-chapter="13">13.Starting Out</a>
+				<a class="st" id="st_14" data-seq="16" data-id="14_01" data-chapter="14">14.Operating a Car</a>
+				<a class="st" id="st_15" data-seq="10" data-id="15_01" data-chapter="15">15.Driving Along</a>
+				<a class="st" id="st_15" data-seq="10" data-id="15_02" data-chapter="15">15.Driving Along-2</a>
+				<a class="st" id="st_15" data-seq="9" data-id="15_03" data-chapter="15">15.Driving Along-3</a>
+				<a class="st" id="st_16" data-seq="10" data-id="16_01" data-chapter="16">16.Taking a Train</a>
+				<a class="st" id="st_17" data-seq="13" data-id="17_01" data-chapter="17">17.Taking a Texi</a>
+				<a class="st" id="st_18" data-seq="8" data-id="18_01" data-chapter="18">18.Walking Somewhere</a>
+				<a class="st" id="st_19" data-seq="8" data-id="19_01" data-chapter="19">19.Riding a Bicycle</a> 
+			</li>
+			<li>
+				<a class="st_title">SECTION 3: AT HOME IN THE EVENING</a>
+				<a class="st" id="st_20" data-seq="12" data-id="20_01" data-chapter="20">20.Returning Home/Making Dinner</a>
+				<a class="st" id="st_20" data-seq="14" data-id="20_02" data-chapter="20">20.Returning Home/Making Dinner-2</a>
+				<a class="st" id="st_21" data-seq="8" data-id="21_01" data-chapter="21">21.Making a Salad</a>
+				<a class="st" id="st_22" data-seq="10" data-id="22_01" data-chapter="22">22.Preparing Vegetables</a>
+				<a class="st" id="st_23" data-seq="6" data-id="23_01" data-chapter="23">23.Making Spaghetti</a>
+				<a class="st" id="st_23" data-seq="11" data-id="23_02" data-chapter="23">23.Making Spaghetti-2</a>
+				<a class="st" id="st_24" data-seq="11" data-id="24_01" data-chapter="24">24.Cooking Rice</a>
+				<a class="st" id="st_25" data-seq="12" data-id="25_01" data-chapter="25">25.Eating Dinner</a>
+				<a class="st" id="st_26" data-seq="10" data-id="26_01" data-chapter="26">26.Clearing the Table</a>
+				<a class="st" id="st_27" data-seq="12" data-id="27_01" data-chapter="27">27.Doing Dishes</a>
+				<a class="st" id="st_28" data-seq="14" data-id="28_01" data-chapter="28">28.Playing a CD(Compact Disc)</a>
+				<a class="st" id="st_29" data-seq="14" data-id="29_01" data-chapter="29">29.Using a Personal Cassette Player</a>
+				<a class="st" id="st_30" data-seq="15" data-id="30_01" data-chapter="30">30.Reading</a>
+				<a class="st" id="st_31" data-seq="15" data-id="31_01" data-chapter="31">31.Watching Television</a>
+				<a class="st" id="st_32" data-seq="14" data-id="32_01" data-chapter="32">32.Watching a Video</a>
+				<a class="st" id="st_33" data-seq="14" data-id="33_01" data-chapter="33">33.Babysitting</a>
+				<a class="st" id="st_34" data-seq="11" data-id="34_01" data-chapter="34">34.Going to Bed</a>
+				<a class="st" id="st_34" data-seq="10" data-id="34_02" data-chapter="34">34.Going to Bed-2</a>
+			</li>
+			<li>
+				<a class="st_title">SECTION 4: MANAGING A HOUSEHOLD</a>
+				<a class="st" id="st_35" data-seq="10" data-id="35_01" data-chapter="35">35.Doing Laundry</a>
+				<a class="st" id="st_35" data-seq="11" data-id="35_02" data-chapter="35">35.Doing Laundry-2</a>
+				<a class="st" id="st_36" data-seq="11" data-id="36_01" data-chapter="36">36.Cleaning the House</a>
+				<a class="st" id="st_36" data-seq="12" data-id="36_02" data-chapter="36">36.Cleaning the House-2</a>
+				<a class="st" id="st_37" data-seq="9" data-id="37_01" data-chapter="37">37.Taking Care of a Cat</a>
+				<a class="st" id="st_38" data-seq="11" data-id="38_01" data-chapter="38">38.Taking Care of a Dog</a>
+				<a class="st" id="st_39" data-seq="8" data-id="39_01" data-chapter="39">39.Taking Care of a Lawn</a>
+				<a class="st" id="st_40" data-seq="14" data-id="40_01" data-chapter="40">40.Gardening</a>
+				<a class="st" id="st_41" data-seq="12" data-id="41_01" data-chapter="41">41.Cleaning a Car</a>
+				<a class="st" id="st_42" data-seq="12" data-id="42_01" data-chapter="42">42.Taking a Car to a Garage for Repairs</a>
+				<a class="st" id="st_43" data-seq="9" data-id="43_01" data-chapter="43">43.Changing a Flat Tire</a>
+				<a class="st" id="st_44" data-seq="8" data-id="44_01" data-chapter="44">44.Dealing with a Power Failure</a>
+				<a class="st" id="st_45" data-seq="8" data-id="45_01" data-chapter="45">45.Working with Wood</a>
+				<a class="st" id="st_46" data-seq="11" data-id="46_01" data-chapter="46">46.Joining Things with Bolts/Screws</a>
+				<a class="st" id="st_47" data-seq="7" data-id="47_01" data-chapter="47">47.shopping for Groceries</a>
+				<a class="st" id="st_47" data-seq="15" data-id="47_02" data-chapter="47">47.shopping for Groceries-2</a>
+				<a class="st" id="st_48" data-seq="11" data-id="48_01" data-chapter="48">48.Paying for Things</a>
+				<a class="st" id="st_48" data-seq="8" data-id="48_02" data-chapter="48">48.Paying for Things-2</a>
+				<a class="st" id="st_48" data-seq="7" data-id="48_03" data-chapter="48">48.Paying for Things-3</a>
+				<a class="st" id="st_49" data-seq="10" data-id="49_01" data-chapter="49">49.Going to a Bank</a>
+				<a class="st" id="st_50" data-seq="11" data-id="50_01" data-chapter="50">50.Using an ATM</a>
+			</li>
+			<li>
+				<a class="st_title">SECTION 5: KEEPING IN TOUCH</a>
+				<a class="st" id="st_51" data-seq="10" data-id="51_01" data-chapter="51">51.Making a Phone Call</a>
+				<a class="st" id="st_52" data-seq="14" data-id="52_01" data-chapter="52">52.Answering a Telephone</a>
+				<a class="st" id="st_53" data-seq="11" data-id="53_01" data-chapter="53">53.Leaving a Message</a>
+				<a class="st" id="st_54" data-seq="10" data-id="54_01" data-chapter="54">54.Taking a Message</a>
+				<a class="st" id="st_55" data-seq="11" data-id="55_01" data-chapter="55">55.Using an Answering Machine</a>
+				<a class="st" id="st_56" data-seq="9" data-id="56_01" data-chapter="56">56.Writing a Personal Letter</a>
+				<a class="st" id="st_57" data-seq="7" data-id="57_01" data-chapter="57">57.Mailing a letter</a>
+				<a class="st" id="st_57" data-seq="12" data-id="57_02" data-chapter="57">57.Mailing a letter-2</a>
+			</li>
+			<li>
+				<a class="st_title">SECTION 6: HAVING FUN WITH FRIENDS</a>
+				<a class="st" id="st_58" data-seq="10" data-id="58_01" data-chapter="58">58.Going to a Birthday Party</a>
+				<a class="st" id="st_59" data-seq="15" data-id="59_01" data-chapter="59">59.Going to a Dinner Party</a>
+				<a class="st" id="st_60" data-seq="10" data-id="60_01" data-chapter="60">60.Going to a Movie</a>
+				<a class="st" id="st_61" data-seq="9" data-id="61_01" data-chapter="61">61.Eating at a Fast Food Restaurant</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div style="display: none;">
+	<div id="chapter_1_01">
+		<p id="est_1_01">How was your day today? It's been pretty busy, but I've had a good day</p>
+		<p id="tst_1_01">วันนี้เป็นอย่างไรบ้าง? ค่อนข้างยุ่งทีเดียว แต่ก็ถือว่าเป็นวันที่ดีนะ</p>
+		<p id="jst_1_01">今日はどんな一日でしたか？かなり忙しかったですが、良い一日でした</p>
+		
+		<p id="est_1_02">What did you do last weekend? Last weekend I visited my family in Bedfordshire,and we celebrated my brother's birthday</p>
+		<p id="tst_1_02">สุดสัปดาห์ที่ผ่านมาคุณทำอะไรบ้าง? สุดสัปดาห์ที่แล้วฉันไปเยี่ยมครอบครัวที่เบดฟอร์ดเชียร์ และพวกเราได้ฉลองวันเกิดให้น้องชายของฉันด้วย</p>
+		<p id="jst_1_02">先週末は何をしましたか？先週末はベッドフォードシャーにいる家族を訪ね、兄（または弟）の誕生日をお祝いしました</p>
+	</div>	
+	<div id="chapter_1_02">
+		<p id="est_1_03">What hobbies or interests do you have outside of work? I really like running,and I've just bought a treadmill,so I'm enjoying using that</p>
+		<p id="tst_1_03">คุณมีงานอดิเรกหรือความสนใจอะไรบ้างนอกเวลางาน? ฉันชอบการวิ่งมาก และเพิ่งซื้อลู่วิ่งมา ก็เลยกำลังสนุกกับการใช้งานมันอยู่ค่ะ</p>
+		<p id="jst_1_03">仕事以外では、どんな趣味や関心事をお持ちですか？私はランニングがとても好きで、ちょうどランニングマシンを購入したところなので、それを使って楽しんでいます</p>
+		
+		<p id="est_1_04">Have you watched any interesting movies or TV shows recently? I've really been enjoying watching The Lost. It's quite relaxing because it's set in a holiday destination</p>
+		<p id="tst_1_04">ช่วงนี้คุณได้ดูภาพยนตร์หรือรายการโทรทัศน์อะไรที่น่าสนใจบ้างไหมคะ? ส่วนตัวฉันกำลังสนุกกับการดูเรื่อง The Lost อยู่ค่ะ มันช่วยให้รู้สึกผ่อนคลายดีนะ เพราะเนื้อเรื่องมีฉากหลังเป็นสถานที่พักผ่อนตากอากาศค่ะ</p>
+		<p id="jst_1_04">最近、何か面白い映画やテレビ番組は見ましたか？私は今、『The Lost』という作品をとても楽しんで見ています。休暇先が舞台になっているので、見ていてとてもリラックスできます</p>
+	</div>	
+	<div id="chapter_1_03">
+		<p id="est_1_05">What type of music do you enjoy listening to? I honestly don't listen to music,but I do really like Classical guitar.It always chills me out.</p>
+		<p id="tst_1_05">คุณชอบฟังเพลงแนวไหนเหรอ? จริงๆ แล้วฉันไม่ค่อยได้ฟังเพลงเท่าไหร่ แต่ฉันชอบกีตาร์คลาสสิกมากเลย ฟังแล้วรู้สึกผ่อนคลายดี</p>
+		<p id="jst_1_05">普段はどんな音楽を聴くのが好きですか？実は私、普段あまり音楽を聴かないのですが、クラシックギターはとても好きなんです。聴いていると、いつも心が落ち着くんですよね</p>
+		
+		<p id="est_1_06">Do you have any pets,and what's unique about them? Oh,good question.I have a dog and a cat,and what's unique about them is they hav Spanish names because I love Spain: Diego, the dog, and Alfonso, the cat</p>
+		<p id="tst_1_06">คุณเลี้ยงสัตว์บ้างไหม แล้วพวกมันมีความพิเศษอย่างไรบ้าง? โอ้ เป็นคำถามที่ดีนะ ฉันเลี้ยงสุนัขตัวหนึ่งกับแมวอีกตัวหนึ่ง ความพิเศษของพวกมันคือทั้งคู่มีชื่อเป็นภาษาสเปน เพราะฉันชอบประเทศสเปนมาก สุนัขชื่อ "ดิเอโก" ส่วนแมวชื่อ "อัลฟอนโซ"</p>
+		<p id="jst_1_06">ペットは飼っていますか？また、その子たちには何かユニークな点はありますか？ああ、いい質問ですね。犬と猫を飼っているのですが、ユニークなのはスペイン語の名前をつけているところです。私がスペインが大好きなので。犬のディエゴと、猫のアルフォンソです</p>
+	</div>	
+	<div id="chapter_1_04">
+		<p id="est_1_07">What your favourite thing about the current season? I love seeing all the flowers!</p>
+		<p id="tst_1_07">คุณชอบอะไรมากที่สุดเกี่ยวกับฤดูกาลนี้? ฉันชอบที่ได้เห็นดอกไม้บานเต็มไปหมดเลย!</p>
+		<p id="jst_1_07">今の季節のどんなところが好きですか？私は、花がたくさん咲いているのを見るのが大好きです！</p>
+		
+		<p id="est_1_08">What's the most recent book you've read that you enjoyed? My favourite book is about friendship and life in Italy</p>
+		<p id="tst_1_08">หนังสือเล่มล่าสุดที่คุณอ่านแล้วรู้สึกชอบคือเล่มไหนคะ? ส่วนหนังสือเล่มโปรดของฉันเป็นเรื่องเกี่ยวกับมิตรภาพและการใช้ชีวิตในประเทศอิตาลีค่ะ</p>
+		<p id="jst_1_08">最近読んだ本の中で、面白かったものは何ですか？私のお気に入りの本は、イタリアでの友情と人生を描いたものです</p>
+	</div>	
+	<div id="chapter_1_05">
+		<p id="est_1_09">I What's your favourite type of cuisine to eat and why? I love Mediterranean food because it's fresh and healthy</p>
+		<p id="tst_1_09">คุณชอบอาหารประเภทไหนมากที่สุดและเพราะอะไร? ฉันชอบอาหารเมดิเตอร์เรเนียนเพราะเป็นอาหารที่สดใหม่และดีต่อสุขภาพ</p>
+		<p id="jst_1_09">どんな料理を食べるのが一番好きですか？また、その理由は何ですか？私は地中海料理が大好きです。新鮮でヘルシーだからです</p>
+		
+		<p id="est_1_10">Do you prefer living in a city or a rural area,and why? I prefer a rural area because I like nature and quiet places</p>
+		<p id="tst_1_10">คุณชอบอาศัยอยู่ในเมืองหรือในชนบทมากกว่ากัน และเพราะเหตุใด? ฉันชอบอยู่ในชนบทมากกว่า เพราะฉันชอบธรรมชาติและสถานที่ที่เงียบสงบ</p>
+		<p id="jst_1_10">あなたは都市部と地方のどちらに住むのが好きですか？また、それはなぜですか？私は自然や静かな場所が好きなので、地方に住む方が好きです</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){   
+		$('#ths').click(function(){              
+			window.location.href = './index.html';
+		});
+		
+		$('#eea').click(function(){              
+			window.location.href = './index_eea.html';
+		});
+		
+		$('#smt').click(function(){              
+			window.location.href = './index_smt.html';
+		});
+		
+		$('#e10').click(function(){              
+			window.location.href = './index_e10.html';
+		});
+		
+		h_button = $('#eea').height();
+		
+		cw = parseInt($(window).width());
+		ch = parseInt($(window).height());
+		
+		nav_cw = parseInt((cw / 10)*4);
+		nav_h = parseInt((ch / 10)*4);
+		
+		margin_cw = (cw - nav_cw)/2 - (ch/16);
+		//console.log(cw,ch,nav_h,nav_cw,margin_h,margin_cw);
+		
+		$('.eea_modal_nav').css({"width": nav_cw+"px"});
+		$('.eea_modal_nav').css({"height": nav_h+"px"});
+		$('.eea_modal_nav').css({"left": "-"+cw+"px"});
+		$('.eea_modal_nav').css({"padding": (ch/16)+"px"});
+		
+		$('#eea_modal_box').css({'margin-top':h_button});
+		
+		$('.st').on('click', function(event) {
+			event.preventDefault(); // Prevents the link from navigating to a new URL
+			
+			position_id = $(this).attr('id');
+			position_data_id = $(this).attr('data-id');
+			$('#input_position').val(position_id).trigger('change');
+			$('#input_position_data_id').val(position_data_id).trigger('change');
+			//console.log(position_id);
+			//console.log(position_data_id);
+			
+			$('#eea_modal_box').css({"display": "block"});
+			$('#out_box_eea').css({"display": "none"});
+			
+			for_loop_prev_prev = $(this).prev().prev().data('seq'); 
+			for_loop_prev = $(this).prev().data('seq'); 
+			for_loop = $(this).data('seq');
+			chapter_prev_prev = $(this).prev().prev().data('chapter');
+			chapter_prev = $(this).prev().data('chapter');
+			chapter = $(this).data('chapter');
+			//console.log(for_loop_prev);
+			//console.log(for_loop); 
+			//console.log('chapter=',chapter); 
+			//console.log('chapter_prev=',chapter_prev); 
+			$('#eea_chapter').text("eea-"+chapter);
+			start_num = 1;
+			
+			if (chapter_prev != undefined)
+			{
+				if ((chapter == chapter_prev)&&(chapter_prev == chapter_prev_prev))
+				{
+					start_num = for_loop_prev_prev + for_loop_prev + 1;
+					for_loop = start_num + for_loop - 1;
+					console.log('here2');
+				}
+				else
+				{ 
+					if (chapter == chapter_prev){
+						start_num = for_loop_prev + 1;
+						for_loop = for_loop_prev +for_loop;
+						console.log('here');
+						
+					}
+				};
+			}
+			
+			//console.log('start_num=',start_num); 
+			//console.log('for_loop=',for_loop);
+			
+			data_id = $(this).data('id'); 
+			bg_url = '"smt/images/smts_'+data_id+'.jepg"';
+			//console.log(data_id);
+			
+			for (let i = start_num; i <= for_loop; i++) {
+	
+				var j = i;
+	
+				if (j<10){
+					j = '0'+j;
+				}
+				
+				$('#eea_modal_nav').append(`<a class="modal_btn_smt" data-id="${chapter}_${j}">${i}</a>`);
+			};
+			
+			$('#eea_mbg').css({
+				'background': 'url('+bg_url+') no-repeat center #ffffff',
+				'background-size':'contain'
+			});
+			
+			bgh = parseInt($('#eea_mbg').height());
+			margin_h = parseInt((bgh - nav_h)/2);
+			$('.eea_modal_nav').css({"margin-top": margin_h+"px"});
+			
+			$('.modal_btn_smt').on('click', function(event) {
+				event.preventDefault(); // Prevents the link from navigating to a new URL
+				
+				var this_btn_num = $(this).text();
+				$('#eea_chapter').text("eea-"+chapter+"-"+this_btn_num);
+							
+				$('#last_modal').css({"display": "block"});
+				
+				var this_num = $(this).data('id');
+				var est = $('#est_'+this_num).text();
+				var tst = $('#tst_'+this_num).text();
+				var jst = $('#jst_'+this_num).text();
+				console.log(this_num, est, tst);				
+				
+				$('#est').text(est);
+				$('#tst').text(tst);
+				$('#jst').text(jst);
+				
+				var folder_num = chapter;
+				if (folder_num <10){
+					folder_num = '0' + folder_num;
+				}
+				
+				$('#est').append('<audio id="audio_est" src="./eea_audio/'+folder_num+'/e_'+this_num+'.m4a" controls="1"></audio>');
+				$('#tst').append('<audio id="audio_tst" src="./eea_audio/'+folder_num+'/t_'+this_num+'.m4a" controls="1"></audio>');
+				$('#jst').append('<audio id="audio_jst" src="./eea_audio/'+folder_num+'/j_'+this_num+'.m4a" controls="1"></audio>');
+			});
+		});
+		
+		$('#eea_mbg').on('click', function(event){
+			$('#last_close').trigger('click');
+			$('.eea_modal_nav').animate({"left": +margin_cw+"px"},500);
+		});
+		
+		$('#eea_modal_nav').on('click', function(event){
+			$('.eea_modal_nav').animate({"left": "-"+cw+"px"},500);
+		});
+			
+		$('#last_close').on('click', function(event) {
+			event.preventDefault(); // Prevents the link from navigating to a new URL
+			
+			$('#last_modal').css({"display": "none"});
+			
+			$('#est').text('');
+			$('#tst').text('');
+			$('#jst').text('');
+		});
+		
+		$('#eea_moal_close').on('click', function(event){
+			$('.eea_modal_nav').animate({"left": "-"+cw+"px"},500);
+			$('#out_box_eea').css({"display": "block"});
+			$('#eea_modal_box').css({"display": "none"});
+			$('.modal_btn').remove();
+		});
+		
+		/*$('#eea_modal_box').bind('swiperight', function(){
+			position_id = $('#input_position').val();
+			position_data_id = $('#input_position_data_id').val();
+			//console.log(position_id);
+			//console.log(position_data_id);
+			
+			reposition_id = $('#'+position_id+'[data-id="'+position_data_id+'"]').prev().attr('id');
+			reposition_data_id = $('#'+position_id+'[data-id="'+position_data_id+'"]').prev().attr('data-id');
+			console.log(reposition_id);
+			console.log(reposition_data_id);
+			
+			$('#input_position').val(reposition_id).trigger('change');
+			$('#input_position_data_id').val(reposition_data_id).trigger('change');
+			
+			$('#last_close').trigger('click');
+			$('#eea_moal_close').trigger('click');
+			
+			$('#'+reposition_id+'[data-id="'+reposition_data_id+'"]').trigger('click');
+		});
+		
+		$('#eea_modal_box').bind('swipeleft', function(){
+			position_id = $('#input_position').val();
+			position_data_id = $('#input_position_data_id').val();  
+			//console.log(position_id);
+			//console.log(position_data_id);
+			
+			reposition_id = $('#'+position_id+'[data-id="'+position_data_id+'"]').next().attr('id');
+			reposition_data_id = $('#'+position_id+'[data-id="'+position_data_id+'"]').next().attr('data-id');
+			console.log(reposition_id);
+			console.log(reposition_data_id);
+			
+			$('#input_position').val(reposition_id).trigger('change');
+			$('#input_position_data_id').val(reposition_data_id).trigger('change');
+			
+			$('#last_close').trigger('click');
+			$('#eea_moal_close').trigger('click');
+			
+			$('#'+reposition_id+'[data-id="'+reposition_data_id+'"]').trigger('click');
+		});*/
+		
+		$('#eea_modal_box').on('dblclick', function(){
+			$('#last_close').trigger('click');
+			$('#eea_moal_close').trigger('click');
+		});
+		
+		$('#eea_modal_box').swipe( {
+			swipeUp:function(event, direction, distance, duration) {
+				$('#last_close').trigger('click');
+				$('#eea_moal_close').trigger('click');
+			},
+			swipeLeft:function(event, direction, distance, duration) {
+				position_id = $('#input_position').val();
+				position_data_id = $('#input_position_data_id').val();  
+				//console.log(position_id);
+				//console.log(position_data_id);
+				
+				reposition_id = $('#'+position_id+'[data-id="'+position_data_id+'"]').next().attr('id');
+				reposition_data_id = $('#'+position_id+'[data-id="'+position_data_id+'"]').next().attr('data-id');
+				console.log(reposition_id);
+				console.log(reposition_data_id);
+				
+				$('#input_position').val(reposition_id).trigger('change');
+				$('#input_position_data_id').val(reposition_data_id).trigger('change');
+				
+				$('#last_close').trigger('click');
+				$('#eea_moal_close').trigger('click');
+				
+				$('#'+reposition_id+'[data-id="'+reposition_data_id+'"]').trigger('click');
+			},
+			swipeRight:function(event, direction, distance, duration) {
+				position_id = $('#input_position').val();
+				position_data_id = $('#input_position_data_id').val();
+				//console.log(position_id);
+				//console.log(position_data_id);
+				
+				reposition_id = $('#'+position_id+'[data-id="'+position_data_id+'"]').prev().attr('id');
+				reposition_data_id = $('#'+position_id+'[data-id="'+position_data_id+'"]').prev().attr('data-id');
+				console.log(reposition_id);
+				console.log(reposition_data_id);
+				
+				$('#input_position').val(reposition_id).trigger('change');
+				$('#input_position_data_id').val(reposition_data_id).trigger('change');
+				
+				$('#last_close').trigger('click');
+				$('#eea_moal_close').trigger('click');
+				
+				$('#'+reposition_id+'[data-id="'+reposition_data_id+'"]').trigger('click');
+			},
+
+			threshold:100,
+			allowPageScroll:"NONE"
+		});
+	});
+</script>
+</body>
+</html>
