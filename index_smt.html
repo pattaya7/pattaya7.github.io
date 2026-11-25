@@ -300,6 +300,7 @@
 			
 			bgh = parseInt($('#eea_mbg').height());
 			margin_h = parseInt((bgh - nav_h)/2);
+			
 			$('.eea_modal_nav').css({"margin-top": margin_h+"px"});
 			
 			$('.modal_btn_smt').on('click', function(event) {
@@ -325,9 +326,9 @@
 					folder_num = '0' + folder_num;
 				}
 				
-				$('#est').append('<audio id="audio_est" src="./eea_audio/'+folder_num+'/e_'+this_num+'.m4a" controls="1"></audio>');
-				$('#tst').append('<audio id="audio_tst" src="./eea_audio/'+folder_num+'/t_'+this_num+'.m4a" controls="1"></audio>');
-				$('#jst').append('<audio id="audio_jst" src="./eea_audio/'+folder_num+'/j_'+this_num+'.m4a" controls="1"></audio>');
+				$('#est').append('<audio id="audio_est" src="./smt_audio/'+folder_num+'/e_'+this_num+'.m4a" controls="1"></audio>');
+				$('#tst').append('<audio id="audio_tst" src="./smt_audio/'+folder_num+'/t_'+this_num+'.m4a" controls="1"></audio>');
+				$('#jst').append('<audio id="audio_jst" src="./smt_audio/'+folder_num+'/j_'+this_num+'.m4a" controls="1"></audio>');
 			});
 		});
 		
@@ -354,7 +355,7 @@
 			$('.eea_modal_nav').animate({"left": "-"+cw+"px"},500);
 			$('#out_box_eea').css({"display": "block"});
 			$('#eea_modal_box').css({"display": "none"});
-			$('.modal_btn').remove();
+			$('.modal_btn_smt').remove();
 		});
 		
 		/*$('#eea_modal_box').bind('swiperight', function(){
