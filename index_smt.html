@@ -27,6 +27,7 @@
 
 <body>
 <div class="top_nav">
+	<input type="hidden" id="input_margin" value="0" style="height: 6em;">
 	<input type="hidden" id="input_position" value="0">
 	<input type="hidden" id="input_position_data_id" value="0">
 	<div class="top_nav_btn" id="ths">THS</div><!-- Thai song and lyrics -->
@@ -210,16 +211,21 @@
 		cw = parseInt($(window).width());
 		ch = parseInt($(window).height());
 		
-		nav_cw = parseInt((cw / 10)*4);
-		nav_h = parseInt((ch / 10)*4);
+		modal_close_h = parseInt($('#eea_moal_close').height())*2;
+		input_margin = parseInt($('#input_margin').height());
 		
-		margin_cw = (cw - nav_cw)/2 - (ch/16);
-		//console.log(cw,ch,nav_h,nav_cw,margin_h,margin_cw);
+		nav_cw = parseInt((cw / 10)*5);
+		nav_h = parseInt((ch-input_margin));//parseInt((ch / 10)*4);
+		
+		margin_cw = parseInt((cw - nav_cw)/2 - (ch/16));
+		margin_ch = modal_close_h + input_margin;
+		console.log(cw,ch,nav_h,nav_cw,margin_cw,margin_ch);
 		
 		$('.eea_modal_nav').css({"width": nav_cw+"px"});
-		$('.eea_modal_nav').css({"height": nav_h+"px"});
+		$('.eea_modal_nav').css({"height": (nav_h-input_margin-modal_close_h-margin_ch)+"px"});
+		$('.eea_modal_nav').css({"top": margin_ch*2+"px"});
 		$('.eea_modal_nav').css({"left": "-"+cw+"px"});
-		$('.eea_modal_nav').css({"padding": (ch/16)+"px"});
+		//$('.eea_modal_nav').css({"padding": (ch/16)+"px"});
 		
 		$('#eea_modal_box').css({'margin-top':h_button});
 		
